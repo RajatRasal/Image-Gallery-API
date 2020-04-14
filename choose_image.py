@@ -18,7 +18,7 @@ except:
     pass
 
 
-def get_image_from_bucket(request):
+def choose_image(request):
     if request.method == 'GET':
         bucket = 'blog-image-gallery'
         image = random.choice(list(storage_client.list_blobs(bucket)))
