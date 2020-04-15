@@ -1,9 +1,16 @@
+import os
+import random
+
 from flask import Flask, request
 
-from main import get_image_from_bucket
+from choose_image import choose_image
+
+seed = 42
+random.seed(seed)
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def index():
-    return get_image_from_bucket(request)
+    return choose_image(request)
