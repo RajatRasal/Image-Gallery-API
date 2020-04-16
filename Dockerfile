@@ -13,9 +13,11 @@ COPY requirements.txt requirements.txt
 COPY server.py server.py 
 COPY choose_image.py choose_image.py
 COPY gcp_config.json gcp_config.json
+COPY conftest.py conftest.py 
+COPY tests/ tests/ 
 
 RUN pip install -r requirements.txt
 
-EXPOSE 4000
+# EXPOSE 4000
 
-CMD ["flask", "run"]
+# CMD ["flask", "run"]
