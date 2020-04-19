@@ -1,11 +1,15 @@
 GCP_CONFIG = gcp_config.json
+GCP_PROJECT = $$(GCP_PROJECT)
 APP_NAME = image_gallery
 FRONTEND_CONTAINER = image_gallery_api
 TEST_CONTAINER = tests
 
 install:
-	[[ $$(which conda) ]] || echo 'Install Miniconda: https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html'; exit 1;
-	conda env create -f environment.yml 
+	@echo
+	@echo "Install Docker! I'd rather you did this yourself: https://docs.docker.com/get-docker/"
+	@echo
+	@echo "Install GCP CLI and setup a project! https://cloud.google.com/sdk/docs/quickstarts"
+	@echo
 
 build: Dockerfile 
 	docker build . -t $(APP_NAME)
@@ -25,3 +29,23 @@ stop_test:
 
 clean:
 	docker rmi $$(docker images -aq)
+
+setup_bucket: 
+	@echo create bucket, if not already exists, and (re)upload all images to it
+	@echo each file should be uploaded with a name and date
+
+kill_bucket:
+	@echo delete bucket
+
+setup_cloud_function:
+	@echo deploy cloud function
+
+test_cloud_function:
+	@echo using artillery to test
+
+kill_cloud_function:
+	@echo delete cloud function
+
+setup_gcp: setup_bucket setup_cloud_function
+
+kill_gcp: kill_bucket kill_cloud_function
