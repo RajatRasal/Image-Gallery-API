@@ -1,12 +1,8 @@
 import os
-import random
 
 from flask import Flask, request
 
-from choose_image import choose_image
-
-seed = 42
-random.seed(seed)
+from main import choose_image
 
 app = Flask(__name__)
 

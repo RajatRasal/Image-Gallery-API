@@ -4,6 +4,10 @@ APP_NAME = image_gallery
 FRONTEND_CONTAINER = image_gallery_api
 TEST_CONTAINER = tests
 
+CLOUD_FUNCTION = choose_image
+REGION = europe-west2
+
+
 install:
 	@echo
 	@echo "Install Docker! I'd rather you did this yourself: https://docs.docker.com/get-docker/"
@@ -14,12 +18,18 @@ install:
 build: Dockerfile 
 	docker build . -t $(APP_NAME)
 
+upload_images:
+	docker run --name $(FRONTEND_CONTAINER) python3 upload_images.py
+
 run:
 	docker run -p 4000:4000 --name $(FRONTEND_CONTAINER) -d $(APP_NAME) flask run 
 
 test:
 	docker run --name $(TEST_CONTAINER) -d $(APP_NAME) pytest 
 	docker attach $(TEST_CONTAINER) 
+
+deploy:
+	gcloud functions deploy $(CLOUD_FUNCTION) --runtime python37 --trigger-http --region $(REGION)	
 
 stop_run:
 	docker stop $(FRONTEND_CONTAINER); docker rm $(FRONTEND_CONTAINER)

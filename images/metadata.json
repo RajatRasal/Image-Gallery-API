@@ -1,0 +1,67 @@
+[
+ {
+  "image": "a_bee.jpg",
+  "image-date": "Aug 2017",
+  "image-description": "Bee on a Sunflower"
+ },
+ {
+  "image": "a_dandelion.jpg",
+  "image-date": "May 2018",
+  "image-description": "Blowing a Dandelion"
+ },
+ {
+  "image": "butterfly_1.jpg",
+  "image-date": "Sept 2017",
+  "image-description": "A Tiger Longwing"
+ },
+ {
+  "image": "butterfly_2.jpg",
+  "image-date": "Sept 2017",
+  "image-description": "An Emerald Peacock"
+ },
+ {
+  "image": "butterfly_3.jpg",
+  "image-date": "Sept 2017",
+  "image-description": "Julia"
+ },
+ {
+  "image": "droplet_on_a_banana_leaf.jpg",
+  "image-date": "Aug 2017",
+  "image-description": "Droplets on a Leaf"
+ },
+ {
+  "image": "flowerpot.jpg",
+  "image-date": "Sept 2017",
+  "image-description": "Tobermory Flowerpot"
+ },
+ {
+  "image": "forest_stream.jpg",
+  "image-date": "Aug 2019",
+  "image-description": "Stream in the Woods"
+ },
+ {
+  "image": "rays_in_the_snowdonia_valley.jpg",
+  "image-date": "Aug 2019",
+  "image-description": "Snowdonia"
+ },
+ {
+  "image": "snail_in_a_flower.jpg",
+  "image-date": "Sept 2017",
+  "image-description": "Snail in a Flower"
+ },
+ {
+  "image": "staring_cat.jpg",
+  "image-date": "July 2018",
+  "image-description": "Cat Staring out of the Window"
+ },
+ {
+  "image": "the_milky_way.jpg",
+  "image-date": "Aug 2019",
+  "image-description": "Milky Way (just about)"
+ },
+ {
+  "image": "the_science_museum.jpg",
+  "image-date": "Mar 2017",
+  "image-description": "Science Museum"
+ }
+]

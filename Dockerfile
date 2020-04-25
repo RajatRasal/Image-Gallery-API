@@ -15,6 +15,7 @@ COPY choose_image.py choose_image.py
 COPY gcp_config.json gcp_config.json
 COPY conftest.py conftest.py 
 COPY tests/ tests/ 
+COPY images/ images/
 
 RUN pip install -r requirements.txt
 
